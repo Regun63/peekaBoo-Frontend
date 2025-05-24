@@ -23,7 +23,7 @@ const Login = () => {
   
   useEffect(()=>{
     if(users){
-        navigate('/peekaBoo/home')
+        navigate('/home')
     }
 },[])
   const loginHandler=async(e)=>{
@@ -38,7 +38,7 @@ const Login = () => {
       })
       if(res.data.success){
         dispatch( authActions.setAuthUser(res.data.user))
-        navigate('/peekaBoo/home', {
+        navigate('/home', {
             state: { message: res.data.message },
           });
       }
@@ -121,7 +121,7 @@ const Login = () => {
                 ) : "Login"}
               </button>
               <p className="text-sm font-light text-center text-gray-500 dark:text-gray-400">
-                Don't have an account? <NavLink to="/peekaBoo/register" className="font-medium text-blue-600 hover:underline dark:text-primary-500">Sign up here</NavLink>
+                Don't have an account? <NavLink to="/register" className="font-medium text-blue-600 hover:underline dark:text-primary-500">Sign up here</NavLink>
               </p>
             </form>
           </div>

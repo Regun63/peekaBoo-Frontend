@@ -21,7 +21,7 @@ const Signup = () => {
 
   useEffect(()=>{
     if(users){
-        navigate('/peekaBoo/home')
+        navigate('/home')
     }
 },[])
   const signUpHandler = async (e) => {
@@ -39,7 +39,7 @@ const Signup = () => {
         }
       );
       if (res.data.success) {
-        navigate("/peekaBoo/login");
+        navigate("/login");
         toast.success(res.data.message, {
           position: "bottom-right",
         });
@@ -187,7 +187,7 @@ const Signup = () => {
               <p className="text-sm font-light text-center text-gray-500 dark:text-gray-400">
                 Already have an account?{" "}
                 <NavLink
-                  to="/peekaBoo/login"
+                  to="/login"
                   className="font-medium text-blue-600 hover:underline dark:text-primary-500"
                 >
                   Login here

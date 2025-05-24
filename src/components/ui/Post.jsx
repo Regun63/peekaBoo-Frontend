@@ -179,7 +179,7 @@ const Post = ({ post }) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center  space-x-2 sm:space-x-3">
             <Link
-              to={`/peekaBoo/profile/${post?.author?._id}`}
+              to={`/profile/${post?.author?._id}`}
               className="flex items-center  space-x-2 sm:space-x-3"
             >
               <Avatar className="h-6 w-6 sm:h-10 sm:w-10  rounded-full border-2 border-purple-800 overflow-hidden">

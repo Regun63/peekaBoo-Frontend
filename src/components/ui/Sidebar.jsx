@@ -101,7 +101,7 @@ const Sidebar = () => {
       );
       if (res.data.success) {
         dispatch(authActions.setAuthUser(null))
-        navigate("/peekaBoo/login", {
+        navigate("/login", {
           state: { message: res.data.message },
         });
       }
@@ -118,7 +118,7 @@ const Sidebar = () => {
         { withCredentials: true }
       );
       if (res.data.success) {
-        navigate(`/peekaBoo/profile/${users?._id}`);
+        navigate(`/profile/${users?._id}`);
       }
     } catch (error) {
       toast.error(error.response?.data?.message || "User is not Authenticated");
@@ -136,13 +136,13 @@ const Sidebar = () => {
     } else if (item.text === "Home") {
       setActive(item.text);
       setShowNotifications(false);
-      navigate("/peekaBoo/home");
+      navigate("/home");
     } else if (item.text === "Messages") {
       setActive(item.text);
       dispatch(rtnActions.clearMessageNotification([]));
       setShowNotifications(false);
       setShowBadgeChat(false);
-      navigate("/peekaBoo/message");
+      navigate("/message");
     } else if (item.text === "Notifications") {
       setActive(item.text);
       setShowNotifications((prev) => !prev);

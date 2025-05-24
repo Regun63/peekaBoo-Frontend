@@ -45,7 +45,7 @@ const Messages = ({ selectedUser }) => {
               <span className="text-[9px] lg:text-[15px] font-semibold truncate">
                 {selectedUser?.username}
               </span>
-              <Link to={`/peekaBoo/profile/${selectedUser?._id}`}>
+              <Link to={`/profile/${selectedUser?._id}`}>
                 <Button
                   sx={{
                     textTransform: "none",

@@ -71,7 +71,7 @@ const EditProfile = () => {
       
       dispatch(authActions.setAuthUser(updatedUserData));
       
-       navigate(`/peekaBoo/profile/${users?._id}`);
+       navigate(`/profile/${users?._id}`);
        toast.success(res.data.message);
     }
   }

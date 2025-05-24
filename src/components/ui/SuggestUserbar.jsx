@@ -12,7 +12,7 @@ const SuggestUserbar = () => {
     <>
     <div className="flex sm:items-center items-end md:space-x-3">
       <Link
-        to={`/peekaBoo/profile/${users?._id}`}
+        to={`/profile/${users?._id}`}
         className="flex ml-4 sm:ml-0 items-center  space-x-2"
       >
         <Avatar className="h-5 w-5 sm:h-10 sm:w-10 rounded-full border-2 border-purple-800 overflow-hidden">
@@ -50,7 +50,7 @@ const SuggestUserbar = () => {
     {Array.isArray(suggestedUsers) && suggestedUsers.map((user) =>user?._id!==users?._id ? (
       <div key={user?._id} className="flex sm:items-center items-end md:space-x-2">
         <Link
-          to={`/peekaBoo/profile/${user?._id}`}
+          to={`/profile/${user?._id}`}
           className="flex ml-4 sm:ml-0 items-center  space-x-2"
         >
           <Avatar className="h-5 w-5 sm:h-10 sm:w-10 rounded-full border-2 border-purple-800 overflow-hidden">

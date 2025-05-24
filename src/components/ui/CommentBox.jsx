@@ -117,7 +117,7 @@ const CommentBox = ({ open, setOpen, post }) => {
             spacing={2}
             sx={{ width: "100%" }}
           >
-            <Link to={`/peekaBoo/profile/${post?.author?._id}`}>
+            <Link to={`/profile/${post?.author?._id}`}>
               <Avatar className="h-10 w-10 sm:h-12 sm:w-12">
                 <AvatarImage
                   src={users?.image}
@@ -136,7 +136,7 @@ const CommentBox = ({ open, setOpen, post }) => {
             </Link>
 
             <Typography variant="subtitle1" fontWeight={500}>
-              <Link to={`/peekaBoo/profile/${post?.author?._id}`} className="text-gray-800 hover:text-gray-600">
+              <Link to={`/profile/${post?.author?._id}`} className="text-gray-800 hover:text-gray-600">
                 {post?.author?.username || "username"}
               </Link>
             </Typography>

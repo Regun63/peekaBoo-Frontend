@@ -24,7 +24,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path='/peekaBoo' element={<ProtectedRoutes><MainLayout /></ProtectedRoutes>}>
+      <Route path='/' element={<ProtectedRoutes><MainLayout /></ProtectedRoutes>}>
         <Route index element={<Home />} />
         <Route path='home' element={<Home />} />
         <Route path='profile/:id' element={<Profile />} />
@@ -33,8 +33,8 @@ const router = createBrowserRouter(
         <Route path='notification' element={<Notification />} />
         <Route path='message' element={<Message />} />
       </Route>
-      <Route path='/peekaBoo/register' element={<Signup />} />
-      <Route path='/peekaBoo/login' element={<Login />} />
+      <Route path='/register' element={<Signup />} />
+      <Route path='/login' element={<Login />} />
     </>
   )
 )

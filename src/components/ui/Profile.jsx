@@ -102,7 +102,7 @@ const Profile = () => {
             {/* Responsive Button Group */}
             <div className="flex flex-wrap gap-2">
               {userProfile?._id === users?._id ? (
-                <Link to={"/peekaBoo/profile/edit"}>
+                <Link to={"/profile/edit"}>
                   <Button
                     disableElevation
                     sx={{
@@ -169,7 +169,7 @@ const Profile = () => {
                       },
                     }}
                   >
-                    <Link to={"/peekaBoo/message"}>
+                    <Link to={"/message"}>
                     Message</Link>
                     
                   </Button>

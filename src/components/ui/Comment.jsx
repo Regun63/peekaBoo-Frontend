@@ -11,7 +11,7 @@ const Comment = ({ comment }) => {
   return (
     <div className="w-full px-3 py-3 border-b border-gray-200/50 dark:border-gray-700">
       <div className="flex items-start gap-3">
-        <Link to={`/peekaBoo/profile/${comment?.author?._id}`}>
+        <Link to={`/profile/${comment?.author?._id}`}>
           <Avatar className="h-10 w-10 sm:h-11 sm:w-11">
             <AvatarImage
               src={comment?.author?.profilePicture}
@@ -34,7 +34,7 @@ const Comment = ({ comment }) => {
         {/* Username and Comment */}
         <div className="flex flex-col">
           <Link
-            to={`/peekaBoo/profile/${comment?.author?._id}`}
+            to={`/profile/${comment?.author?._id}`}
             className="text-sm font-semibold text-gray-900 dark:text-white hover:underline"
           >
             {comment?.author?.username || "Username"}
