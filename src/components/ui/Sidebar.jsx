@@ -96,7 +96,7 @@ const Sidebar = () => {
   const logoutHandler = async () => {
     try {
       const res = await axios.get(
-        "https://peekaboo-backend-1.onrender.com/api/peekaBoo/user/logout",
+        "https://peekaboo-backend-sush.onrender.com/api/peekaBoo/user/logout",
         { withCredentials: true }
       );
       if (res.data.success) {
@@ -114,7 +114,7 @@ const Sidebar = () => {
   const profileHandler = async () => {
     try {
       const res = await axios.get(
-        `https://peekaboo-backend-1.onrender.com/api/peekaBoo/user/profile/${users?._id}`,
+        `https://peekaboo-backend-sush.onrender.com/api/peekaBoo/user/profile/${users?._id}`,
         { withCredentials: true }
       );
       if (res.data.success) {

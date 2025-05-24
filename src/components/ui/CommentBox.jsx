@@ -31,7 +31,7 @@ const CommentBox = ({ open, setOpen, post }) => {
     if (!input.trim()) return;
     try {
       const res = await axios.post(
-        `https://peekaboo-backend-1.onrender.com/api/peekaBoo/post/${selectedPost?._id}/comment`,
+        `https://peekaboo-backend-sush.onrender.com/api/peekaBoo/post/${selectedPost?._id}/comment`,
         { input },
         {
           headers: {

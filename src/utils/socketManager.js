@@ -5,7 +5,7 @@ let socket = null;
 
 export const connectSocket = (userId) => {
   if (!socket) {
-    socket = io("https://peekaboo-backend-1.onrender.com", {
+    socket = io("https://peekaboo-backend-sush.onrender.com", {
         auth: { userId },      
       
     });

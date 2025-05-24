@@ -17,7 +17,7 @@ const DeleteConfirm = ({open,setOpen,post}) => {
     const deletePostHandler = async () => {
       
         try {
-          const res = await axios.delete(`https://peekaboo-backend-1.onrender.com/api/peekaBoo/post/delete/${post?._id}`, {
+          const res = await axios.delete(`https://peekaboo-backend-sush.onrender.com/api/peekaBoo/post/delete/${post?._id}`, {
             withCredentials: true,
           });
    
