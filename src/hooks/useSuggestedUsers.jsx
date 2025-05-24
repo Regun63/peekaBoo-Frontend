@@ -7,7 +7,7 @@ import {authActions} from "../redux/authorSlice"
  useEffect(()=>{
     const fetchPosts=async()=>{
         try {
-            const res=await axios.get("http://localhost:5000/api/peekaBoo/user/suggestedusers",{withCredentials:true})
+            const res=await axios.get("https://peekaboo-backend-1.onrender.com/api/peekaBoo/user/suggestedusers",{withCredentials:true})
         if(res.data.success)
         dispatch(authActions.setSuggestedUsers(res.data.users))
         } catch (error) {

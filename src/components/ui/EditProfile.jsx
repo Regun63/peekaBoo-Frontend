@@ -53,7 +53,7 @@ const EditProfile = () => {
     
   try{
     setLoading(true);
-    const res=await axios.post('http://localhost:5000/api/peekaBoo/user/profile/edit',formData,{
+    const res=await axios.post('https://peekaboo-backend-1.onrender.com/api/peekaBoo/user/profile/edit',formData,{
       headers:{
         'Content-Type':'multipart/form-data'
       },

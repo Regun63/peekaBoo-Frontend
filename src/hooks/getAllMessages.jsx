@@ -13,7 +13,7 @@ const useGetAllMessages = (selectedUser) => {
     const fetchAllMessages = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/peekaBoo/message/${selectedUser._id}/all`,
+          `https://peekaboo-backend-1.onrender.com/api/peekaBoo/message/${selectedUser._id}/all`,
           { withCredentials: true }
         );
         if (res.data.success) {
