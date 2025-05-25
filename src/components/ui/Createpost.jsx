@@ -58,7 +58,7 @@ const Createpost = ({ open, setOpen }) => {
     if(media) formData.append("image",media)
     if(media) formData.append("caption",caption)
     try {
-      const res = await axios.post("https://peekaboo-backend-2.onrender.com/api/peekaBoo/post/addpost",formData,{
+      const res = await axios.post("https://peekaboo-backend-2-49bc.onrender.com/api/peekaBoo/post/addpost",formData,{
         headers:{
           "Content-Type":'multipart/form-data',
         },

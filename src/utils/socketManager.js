@@ -6,7 +6,8 @@ let socket = null;
 export const connectSocket = (userId) => {
   if (!socket) {
     socket = io("https://peekaboo-backend-sush.onrender.com", {
-        auth: { userId },      
+        auth: { userId },
+          transports: ["websocket"],      
       
     });
   }

@@ -30,7 +30,7 @@ const Login = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const res=await axios.post('https://peekaboo-backend-2.onrender.com/api/peekaBoo/user/login',input,{
+      const res=await axios.post('https://peekaboo-backend-2-49bc.onrender.com/api/peekaBoo/user/login',input,{
         headers:{
           "Content-Type":"application/json"
         },

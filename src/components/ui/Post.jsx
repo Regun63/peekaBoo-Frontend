@@ -63,7 +63,7 @@ const Post = ({ post }) => {
     try {
       // Send request with the profile user's id (the one to follow/unfollow)
       const res = await axios.post(
-        `https://peekaboo-backend-2.onrender.com/api/peekaBoo/user/follow_or_unfollow/${post?.author?._id}`,
+        `https://peekaboo-backend-2-49bc.onrender.com/api/peekaBoo/user/follow_or_unfollow/${post?.author?._id}`,
         {},
         { withCredentials: true }
       );
@@ -84,7 +84,7 @@ const Post = ({ post }) => {
     try {
       const action = liked ? "dislike" : "like";
       const res = await axios.get(
-        `https://peekaboo-backend-2.onrender.com/api/peekaBoo/post/${post?._id}/${action}`,
+        `https://peekaboo-backend-2-49bc.onrender.com/api/peekaBoo/post/${post?._id}/${action}`,
         { withCredentials: true }
       );
       if (res.data.success) {
@@ -114,7 +114,7 @@ const Post = ({ post }) => {
     console.log("comment");
     try {
       const res = await axios.post(
-        `https://peekaboo-backend-2.onrender.com/api/peekaBoo/post/${post?._id}/comment`,
+        `https://peekaboo-backend-2-49bc.onrender.com/api/peekaBoo/post/${post?._id}/comment`,
         { input },
         {
           headers: {
@@ -151,7 +151,7 @@ const Post = ({ post }) => {
     
     try {
       const res = await axios.get(
-        `https://peekaboo-backend-2.onrender.com/api/peekaBoo/post/${post?._id}/bookmark`,
+        `https://peekaboo-backend-2-49bc.onrender.com/api/peekaBoo/post/${post?._id}/bookmark`,
        
         {
           withCredentials: true,

@@ -29,7 +29,7 @@ const Signup = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://peekaboo-backend-2.onrender.com/api/peekaBoo/user/register",
+        "https://peekaboo-backend-2-49bc.onrender.com/api/peekaBoo/user/register",
         input,
         {
           headers: {

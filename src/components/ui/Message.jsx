@@ -11,12 +11,11 @@ import axios from "axios";
 import { chatActions } from "../../redux/chatSlice";
 import VideoCameraFrontOutlinedIcon from "@mui/icons-material/VideoCameraFrontOutlined";
 
-
 const Message = () => {
   const { suggestedUsers } = useSelector((store) => store.author);
   const { selectedUser } = useSelector((store) => store.author);
   const { onlineUsers, messages } = useSelector((store) => store.chat);
-  const { unread } = useSelector((store) => store?.notify ||{});
+  const { unread } = useSelector((store) => store?.notify || {});
   const [showBadgeChat, setShowBadgeChat] = useState(true);
   const isOnline = onlineUsers.includes(selectedUser?._id);
 
@@ -28,7 +27,7 @@ const Message = () => {
   const handleSendMessage = async () => {
     try {
       const res = await axios.post(
-        `https://peekaboo-backend-2.onrender.com/api/peekaBoo/message/${selectedUser?._id}/send`,
+        `https://peekaboo-backend-2-49bc.onrender.com/api/peekaBoo/message/${selectedUser?._id}/send`,
         {
           message: newText,
         },
@@ -49,7 +48,7 @@ const Message = () => {
       console.log(error);
     }
   };
-  
+
   useEffect(() => {
     return () => {
       dispatch(authActions.setSelectedUser(null));
@@ -183,9 +182,8 @@ const Message = () => {
               sx={{
                 "& .MuiOutlinedInput-root": {
                   borderRadius: "9999px",
-
-                  "&:focus-visible": {
-                    outline: "none",
+                  "& input": {
+                    color: "gray",
                   },
                 },
               }}

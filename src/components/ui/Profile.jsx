@@ -52,7 +52,7 @@ const Profile = () => {
     try {
       // Send request with the profile user's id (the one to follow/unfollow)
       const res = await axios.post(
-        `https://peekaboo-backend-2.onrender.com/api/peekaBoo/user/follow_or_unfollow/${profileUserId}`,
+        `https://peekaboo-backend-2-49bc.onrender.com/api/peekaBoo/user/follow_or_unfollow/${profileUserId}`,
         {},
         { withCredentials: true }
       );
@@ -223,15 +223,15 @@ const Profile = () => {
 
           {/* Stats */}
           <div className="flex justify-around text-sm sm:text-base text-gray-900 font-semibold">
-            <p>
+            <p className="text-gray-600">
               {userProfile?.posts?.length || 0}
               <span className="text-gray-600 ml-1">posts</span>
             </p>
-            <p>
+            <p className="text-gray-600">
               {userProfile?.followers?.length || 0}
               <span  className="text-gray-600 ml-1">followers</span>
             </p>
-            <p>
+            <p className="text-gray-600">
               {userProfile?.following?.length || 0}
               <span className="text-gray-600 ml-1">following</span>
             </p>
@@ -260,7 +260,7 @@ const Profile = () => {
               setIsActive("Posts");
             }}
             className={`hover:text-blue-600 hover:cursor-pointer ${
-              isActive === "Posts" ? "text-blue-600" : ""
+              isActive === "Posts" ? "text-blue-600" : "text-gray-600"
             }`}
           >
             Posts
@@ -270,7 +270,7 @@ const Profile = () => {
               setIsActive("Save");
             }}
             className={`hover:text-blue-600 hover:cursor-pointer  ${
-              isActive === "Save" ? "text-blue-600" : ""
+              isActive === "Save" ? "text-blue-600" : "text-gray-600"
             }`}
           >
             Save
@@ -280,7 +280,7 @@ const Profile = () => {
               setIsActive("Tags");
             }}
             className={`hover:text-blue-600 hover:cursor-pointer  ${
-              isActive === "Tags" ? "text-blue-600" : ""
+              isActive === "Tags" ? "text-blue-600" : "text-gray-600"
             }`}
           >
             Tags
