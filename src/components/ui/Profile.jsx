@@ -52,7 +52,7 @@ const Profile = () => {
     try {
       // Send request with the profile user's id (the one to follow/unfollow)
       const res = await axios.post(
-        `https://peekaboo-mybackend.onrender.com/api/peekaBoo/user/follow_or_unfollow/${profileUserId}`,
+        `https://peekaboo-backend-2.onrender.com/api/peekaBoo/user/follow_or_unfollow/${profileUserId}`,
         {},
         { withCredentials: true }
       );
