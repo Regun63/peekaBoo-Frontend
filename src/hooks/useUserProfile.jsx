@@ -12,11 +12,11 @@ const useUserProfile = (userId) => {
     const fetchUserProfile = async () => {
       try {
          const res1 = await axios.get(
-            `https://peekaboo-backend-sush.onrender.com/api/peekaBoo/user/profile/${userId}`,
+            `https://peekaboo-mybackend.onrender.com/api/peekaBoo/user/profile/${userId}`,
             { withCredentials: true }
           );
           const res2 = await axios.get(
-            `https://peekaboo-backend-sush.onrender.com/api/peekaBoo/post/userpost/${userId}`,
+            `https://peekaboo-mybackend.onrender.com/api/peekaBoo/post/userpost/${userId}`,
             { withCredentials: true }
           );
           

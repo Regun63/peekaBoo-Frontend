@@ -28,7 +28,7 @@ const Message = () => {
   const handleSendMessage = async () => {
     try {
       const res = await axios.post(
-        `https://peekaboo-backend-sush.onrender.com/api/peekaBoo/message/${selectedUser?._id}/send`,
+        `https://peekaboo-mybackend.onrender.com/api/peekaBoo/message/${selectedUser?._id}/send`,
         {
           message: newText,
         },
